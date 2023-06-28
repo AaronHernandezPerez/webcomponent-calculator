@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+
+    <script defer src="./components/cal-display.js"></script>
+    <script defer src="./components/cal-button.js"></script>
+    <script defer src="./components/cal-grid.js"></script>
+    <script defer src="./classes/Calculator.js"></script>
+    <script defer src="./main.js"></script>
+    <style>
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <cal-display>
+      <span id="value" slot="value">0</span>
+      <span id="operation" slot="operation"></span>
+      <span id="operand">0</span>
+    </cal-display>
+
+    <div style="display: flex">
+      <div style="flex-basis: 60%">
+        <cal-grid columns="3" id="button-container"></cal-grid>
+      </div>
+      <div style="flex-basis: 20%">
+        <cal-grid columns="1" id="operations-container"></cal-grid>
+      </div>
+      <div style="flex-basis: 20%">
+        <cal-grid columns="1" id="top-operations-container"></cal-grid>
+      </div>
+    </div>
+  </body>
+</html>
